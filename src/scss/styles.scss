@@ -1,0 +1,29 @@
+$black-background: #121212;
+$dark-grey-background: #222222;
+
+body {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+    
+  background-color: $black-background;
+}
+
+.card {
+  width: 400px;
+  height: 200px;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $dark-grey-background;
+  color: white;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
