@@ -24,8 +24,64 @@
 	</head>
 	<body>
 		<div class="card">
-			<h1 id="greeting"></h1>
-			<p>Edit <code>src/index.html</code> and save to reload</p>
+			<form id="form">
+				<label for="max-score" data-i18n="max-score">Maximum Achieved Score:</label>
+				<input
+					type="number"
+					id="max-score"
+					name="maxScore"
+					step="0.1"
+					value="32.8"
+					required
+				/><br />
+
+				<label for="min-score" data-i18n="min-score">Minimum Achieved Score:</label>
+				<input
+					type="number"
+					id="min-score"
+					name="minScore"
+					step="0.1"
+					value="-3.5"
+					required
+				/><br />
+
+				<label for="avg-score" data-i18n="avg-score">Average Score:</label>
+				<input
+					type="number"
+					id="avg-score"
+					name="avgScore"
+					step="0.1"
+					value="11.7"
+					required
+				/><br />
+
+				<label for="user-score" data-i18n="user-score">Your Score:</label>
+				<input
+					type="number"
+					id="user-score"
+					name="userScore"
+					step="0.1"
+					value="20"
+					required
+				/><br />
+
+				<label for="total-competitors" data-i18n="total-competitors"
+					>Total competitors count:</label
+				>
+				<input
+					type="number"
+					id="total-competitors"
+					name="totalCompetitors"
+					step="1"
+					value="1229"
+					min="0"
+					required
+				/><br />
+
+				<button type="submit" data-i18n="submit">Submit</button>
+			</form>
+
+			<canvas id="data-chart" width="800" height="400"></canvas>
 		</div>
 	</body>
 </html>
