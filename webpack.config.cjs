@@ -59,6 +59,7 @@ const config = {
 			patterns: [
 				{ from: "./src/robots.txt", to: "robots.txt" }, // comment this line, if you won't need robots.txt
 				{ from: "./src/assets", to: "assets" },
+				{ from: "./src/translations", to: "translations" },
 			],
 		}),
 		new webpack.HotModuleReplacementPlugin(),
