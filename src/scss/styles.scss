@@ -6,6 +6,7 @@ body {
 	align-items: center;
 
 	color: #121212;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
 	padding: 0 1rem;
 }
@@ -78,6 +79,8 @@ body {
 	button[type="submit"] {
 		background-color: #4caf50;
 		color: white;
+
+		font-weight: bold;
 
 		padding: 0.5rem 1rem;
 
