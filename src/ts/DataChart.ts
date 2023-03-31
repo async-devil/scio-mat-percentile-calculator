@@ -19,7 +19,7 @@ export class DataChart {
 					{
 						data: Object.values(percentileCount),
 						fill: false,
-						borderColor: "rgb(75, 192, 192)",
+						borderColor: "#4caf50",
 						tension: 0.1,
 					},
 				],
