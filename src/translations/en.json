@@ -3,11 +3,16 @@
   "description-text": "This website is created to help you estimate your exam percentile using achieved score and other data",
   "how-it-works-title": "How it works?",
   "how-it-works-text": "The calculator generates random scores and uses Gaussian normalization to distribute them. On output, algorithm returns score to person count rates and calculates your percentile",
+  "attention-title": "Attention",
+  "attention-text": "Values which website will calculate for you are inaccurate and can't guarantee you anything. Official data you can find ",
+  "attention-text-here": "here",
   "max-score": "Maximum Achieved Score:",
   "min-score": "Minimum Achieved Score:",
   "avg-score": "Average Score:",
   "user-score": "Your Score:",
   "total-competitors": "Total competitors count:",
   "submit": "Calculate",
-  "result-text": "Your percentile is: "
+  "result-text": "Your percentile is: ",
+  "contribution-title": "Any questions, ideas?",
+  "contribution-text": "You can contribute to this project or ask any questions on the project's GitHub page"
 }

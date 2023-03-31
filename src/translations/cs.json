@@ -3,11 +3,16 @@
   "description-text": "Tato webová stránka je vytvořena tak, aby vám pomohla odhadnout percentil vaší zkoušky na základě dosaženého skóre a dalších údajů",
   "how-it-works-title": "Jak to funguje?",
   "how-it-works-text": "Kalkulačka generuje náhodné skóre a k jeho rozložení používá Gaussovu normalizaci. Na výstupu algoritmus vrátí skóre k poměrům počtu osob a vypočítá váš percentil",
+  "attention-title": "Pozor",
+  "attention-text": "Hodnoty, které pro vás webové stránky vypočítají, jsou nepřesné a nemohou nic zaručit. Oficiální údaje naleznete ",
+  "attention-text-here": "zde",
   "max-score": "Max. dosažené skóre:",
   "min-score": "Min. dosažené skóre:",
   "avg-score": "Medián skóre:",
   "user-score": "Vaše skóre:",
   "total-competitors": "Počet účastníků:",
   "submit": "Vypočítat",
-  "result-text": "Váš percentil je: "
+  "result-text": "Váš percentil je: ",
+  "contribution-title": "Nějaké dotazy, nápady?",
+  "contribution-text": "Můžete přispívat k tomuto projektu nebo klást dotazy na stránce projektu GitHub"
 }

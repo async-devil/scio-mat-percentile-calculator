@@ -11,28 +11,27 @@ body {
 	padding: 0 1rem;
 }
 
-// Style for the description container
+h1,
+h2 {
+	margin-bottom: 0.5rem;
+
+	font-weight: bold;
+}
+
+h2 {
+	margin-top: 1rem;
+
+	font-size: 1.5rem;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
 .description {
 	max-width: 800px;
 
 	padding: 1rem;
-
-	h1,
-	h2 {
-		margin-bottom: 0.5rem;
-
-		font-weight: bold;
-	}
-
-	h2 {
-		margin-top: 1rem;
-
-		font-size: 1.5rem;
-	}
-
-	p {
-		margin-bottom: 1rem;
-	}
 }
 
 .calculator {
@@ -42,8 +41,7 @@ body {
 
 	gap: 0.5rem;
 
-	padding: 1rem;
-	padding-top: 0;
+	padding: 0 1rem;
 
 	@media screen and (max-width: 800px) {
 		grid-template-columns: 1fr;
@@ -126,15 +124,9 @@ body {
 	}
 }
 
-// .card {
+.contribution {
+	max-width: 800px;
+	width: 100%;
 
-//   display: flex;
-
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-
-//   h1 {
-//     margin-bottom: 2rem;
-//   }
-// }
+	padding: 1rem;
+}
