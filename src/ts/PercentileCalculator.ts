@@ -13,8 +13,6 @@ export class PercentileCalculator {
 	}
 
 	private generateRandomScores() {
-		// this.random = new Random();
-
 		const scores: number[] = [];
 
 		for (let i = 0; i < this.inputScores.totalCompetitors; i += 1) {
