@@ -1,12 +1,12 @@
 export class TranslationController {
-	private selectedLanguage = this.initLanguage();
+	private selectedLanguage = "en";
 
 	constructor() {
-		this.translate();
-	}
+		const language = localStorage.getItem("language") || navigator.language.substring(0, 2) || "en";
 
-	private initLanguage() {
-		return localStorage.getItem("language") || navigator.language.substring(0, 2) || "en";
+		this.language = language;
+
+		this.translate();
 	}
 
 	public set language(language: string) {
@@ -34,7 +34,7 @@ export class TranslationController {
 		}
 	}
 
-	private translate() {
+	public translate() {
 		void this.loadTranslation(this.selectedLanguage).then((translations) => {
 			const elements = document.querySelectorAll("[data-i18n]");
 			return elements.forEach((element) =>

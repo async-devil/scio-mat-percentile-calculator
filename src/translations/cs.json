@@ -1,0 +1,13 @@
+{
+  "description-title": "Percentilová kalkulačka SCIO MAT/NZS",
+  "description-text": "Tato webová stránka je vytvořena tak, aby vám pomohla odhadnout percentil vaší zkoušky na základě dosaženého skóre a dalších údajů",
+  "how-it-works-title": "Jak to funguje?",
+  "how-it-works-text": "Kalkulačka generuje náhodné skóre a k jeho rozložení používá Gaussovu normalizaci. Na výstupu algoritmus vrátí skóre k poměrům počtu osob a vypočítá váš percentil",
+  "max-score": "Max. dosažené skóre:",
+  "min-score": "Min. dosažené skóre:",
+  "avg-score": "Medián skóre:",
+  "user-score": "Vaše skóre:",
+  "total-competitors": "Počet účastníků:",
+  "submit": "Vypočítat",
+  "result-text": "Váš percentil je: "
+}
