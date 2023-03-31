@@ -18,6 +18,8 @@ export class FormHandler {
 	private userScoreInput = this.form.querySelector("#user-score") as HTMLInputElement;
 	private totalCompetitorsInput = this.form.querySelector("#total-competitors") as HTMLInputElement;
 
+	private resultPercentileOutput = document.querySelector("#result-percentile") as Element;
+
 	constructor(private readonly chart: DataChart) {
 		this.form.addEventListener("submit", this.formEventListener.bind(this));
 	}
@@ -38,8 +40,12 @@ export class FormHandler {
 
 	private handleData(scores: InputScores) {
 		const calc = new PercentileCalculator(scores);
+		console.log(`Seed: ${calc.seed}`);
 
-		console.log(calc.seed);
 		this.chart.draw(calc.getGeneralPercentileCount(), scores.userScore);
+
+		const userPercentile = calc.getUserPercentile().toPrecision(3);
+
+		this.resultPercentileOutput.textContent = userPercentile.toString();
 	}
 }
