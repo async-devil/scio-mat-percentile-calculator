@@ -10,52 +10,64 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
 
-		<title>Website template</title>
-		<meta name="keywords" content="" />
-		<meta name="publisher" content="" />
-		<meta name="author" href="" />
-		<meta name="description" content="" />
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-YH1BNCLRJX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-		<meta property="og:title" content="" />
-		<meta property="og:url" content="" />
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
+			gtag("js", new Date());
+			gtag("config", "G-YH1BNCLRJX");
+		</script>
+
+		<title>SCIO MAT percentile calculator</title>
+		<meta name="keywords" content="SCIO, MAT, NZS, percentil, kalkulačka, calculator, percentile" />
+		<meta name="author" href="Timofii Khomenko" />
+		<meta
+			name="description"
+			content="This website is created to help you estimate your percentile using your score and other data"
+		/>
+
+		<meta property="og:title" content="SCIO MAT percentile calculator" />
+		<meta
+			property="og:url"
+			content="https://async-devil.github.io/scio-mat-percentile-calculator/"
+		/>
 		<meta property="og:image" content="" />
-		<meta property="og:description" content="" />
+		<meta
+			property="og:description"
+			content="This website is created to help you estimate your percentile using your score and other data"
+		/>
 		<meta property="og:type" content="website" />
 	</head>
 	<body>
-		<div class="card">
+		<div class="description">
+			<h1 data-i18n="description-title"></h1>
+			<p data-i18n="description-text"></p>
+			<h2 data-i18n="how-it-works-title"></h2>
+			<p data-i18n="how-it-works-text"></p>
+		</div>
+		<div class="calculator">
 			<form id="form">
-				<label for="max-score" data-i18n="max-score">Maximum Achieved Score:</label>
+				<label for="max-score" data-i18n="max-score"></label>
 				<input
 					type="number"
 					id="max-score"
 					name="maxScore"
 					step="0.1"
-					value="32.8"
+					value="33.7"
 					required
 				/><br />
 
-				<label for="min-score" data-i18n="min-score">Minimum Achieved Score:</label>
-				<input
-					type="number"
-					id="min-score"
-					name="minScore"
-					step="0.1"
-					value="-3.5"
-					required
-				/><br />
+				<label for="min-score" data-i18n="min-score"></label>
+				<input type="number" id="min-score" name="minScore" step="0.1" value="-5" required /><br />
 
-				<label for="avg-score" data-i18n="avg-score">Average Score:</label>
-				<input
-					type="number"
-					id="avg-score"
-					name="avgScore"
-					step="0.1"
-					value="11.7"
-					required
-				/><br />
+				<label for="avg-score" data-i18n="avg-score"></label>
+				<input type="number" id="avg-score" name="avgScore" step="0.1" value="16" required /><br />
 
-				<label for="user-score" data-i18n="user-score">Your Score:</label>
+				<label for="user-score" data-i18n="user-score"></label>
 				<input
 					type="number"
 					id="user-score"
@@ -65,23 +77,26 @@
 					required
 				/><br />
 
-				<label for="total-competitors" data-i18n="total-competitors"
-					>Total competitors count:</label
-				>
+				<label for="total-competitors" data-i18n="total-competitors"></label>
 				<input
 					type="number"
 					id="total-competitors"
 					name="totalCompetitors"
 					step="1"
-					value="1229"
+					value="1439"
 					min="0"
 					required
 				/><br />
 
-				<button type="submit" data-i18n="submit">Submit</button>
+				<button type="submit" data-i18n="submit"></button>
 			</form>
 
-			<canvas id="data-chart" width="800" height="400"></canvas>
+			<div class="result">
+				<div class="result_info">
+					<span data-i18n="result-text"></span><b id="result-percentile"></b>
+				</div>
+				<canvas id="data-chart"></canvas>
+			</div>
 		</div>
 	</body>
 </html>

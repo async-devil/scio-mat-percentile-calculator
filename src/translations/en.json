@@ -1,8 +1,13 @@
 {
+  "description-title": "SCIO MAT/NZS Percentile Calculator",
+  "description-text": "This website is created to help you estimate your percentile using your score and other data",
+  "how-it-works-title": "How it works?",
+  "how-it-works-text": "The calculator generates random scores and uses Gaussian normalization to distribute scores. On output, the algorithm returns score to person count rates and calculates your percentile.",
   "max-score": "Maximum Achieved Score:",
   "min-score": "Minimum Achieved Score:",
   "avg-score": "Average Score:",
   "user-score": "Your Score:",
   "total-competitors": "Total competitors count:",
-  "submit": "Submit"
+  "submit": "Submit",
+  "result-text": "Your percentile is: "
 }
