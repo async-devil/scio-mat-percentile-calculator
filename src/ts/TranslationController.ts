@@ -1,12 +1,26 @@
 export class TranslationController {
-	private selectedLanguage = "en";
+	private readonly defaultLanguage = "cs";
+
+	private selectedLanguage = this.defaultLanguage;
 
 	constructor() {
-		const language = localStorage.getItem("language") || navigator.language.substring(0, 2) || "en";
+		const queryLanguage = this.getLanguageFromURLQuery();
 
-		this.language = language;
+		this.language =
+			queryLanguage ||
+			localStorage.getItem("language") ||
+			navigator.language.substring(0, 2) ||
+			this.defaultLanguage;
 
 		this.translate();
+	}
+
+	private getLanguageFromURLQuery(): string | null {
+		const url = new URL(window.location.href);
+
+		const queryParams = new URLSearchParams(url.search);
+
+		return queryParams.get("language");
 	}
 
 	public set language(language: string) {
@@ -19,7 +33,10 @@ export class TranslationController {
 		const response = await fetch(`translations/${lang}.json`);
 
 		// If language not found in the translations folder
-		if (response.status === 404) return await this.loadTranslation("en");
+		if (response.status === 404) {
+			this.language = this.defaultLanguage;
+			return await this.loadTranslation(this.defaultLanguage);
+		}
 
 		const translation: { [key: string]: string } = await response.json();
 
