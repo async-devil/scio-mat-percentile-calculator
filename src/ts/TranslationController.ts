@@ -4,23 +4,11 @@ export class TranslationController {
 	private selectedLanguage = this.defaultLanguage;
 
 	constructor() {
-		const queryLanguage = this.getLanguageFromURLQuery();
-
-		this.language =
-			queryLanguage ||
-			localStorage.getItem("language") ||
-			navigator.language.substring(0, 2) ||
-			this.defaultLanguage;
+		this.language = localStorage.getItem("language") || this.defaultLanguage;
 
 		this.translate();
-	}
 
-	private getLanguageFromURLQuery(): string | null {
-		const url = new URL(window.location.href);
-
-		const queryParams = new URLSearchParams(url.search);
-
-		return queryParams.get("language");
+		this.setAvailableTranslations();
 	}
 
 	public set language(language: string) {
@@ -57,6 +45,36 @@ export class TranslationController {
 			return elements.forEach((element) =>
 				this.translateElement(element as HTMLElement, translations)
 			);
+		});
+	}
+
+	private async loadAvailableLanguages() {
+		const response = await fetch("translations/available-languages.json");
+
+		const languages: { [lang: string]: string } = await response.json();
+
+		return languages;
+	}
+
+	private setAvailableTranslations() {
+		const template = (url: string, langCode: string) => {
+			return `<img src="${url}" class="language-flag" width="40" height="30" alt="${langCode}" />`;
+		};
+
+		const translationsBlock = document.getElementById("translations") as HTMLElement;
+
+		void this.loadAvailableLanguages().then((translations) => {
+			// eslint-disable-next-line promise/always-return
+			for (const [langCode, url] of Object.entries(translations)) {
+				translationsBlock.insertAdjacentHTML("beforeend", template(url, langCode));
+			}
+
+			document.querySelectorAll(".language-flag").forEach((element) => {
+				element.addEventListener("click", () => {
+					this.language = element.getAttribute("alt") || this.defaultLanguage;
+					this.translate();
+				});
+			});
 		});
 	}
 }
