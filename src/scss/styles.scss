@@ -34,6 +34,24 @@ p {
 	padding: 1rem;
 }
 
+#translations {
+	display: flex;
+
+	padding: 0.5rem;
+
+	border: 1px solid #ccc;
+	border-radius: 5px;
+
+	.language-flag {
+		margin: 0 0.5rem;
+
+		border: 1px solid #ccc;
+		border-radius: 5px;
+
+		cursor: pointer;
+	}
+}
+
 .calculator {
 	display: grid;
 	grid-template-columns: 300px 1fr;
@@ -41,7 +59,7 @@ p {
 
 	gap: 0.5rem;
 
-	padding: 0 1rem;
+	padding: 1rem 1rem 0 1rem;
 
 	@media screen and (max-width: 800px) {
 		grid-template-columns: 1fr;
