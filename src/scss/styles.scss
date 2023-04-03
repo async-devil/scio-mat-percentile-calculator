@@ -49,6 +49,12 @@ p {
 		border-radius: 5px;
 
 		cursor: pointer;
+
+		transition: filter 0.2s ease-in-out;
+
+		&:hover {
+			filter: brightness(80%);
+		}
 	}
 }
 
