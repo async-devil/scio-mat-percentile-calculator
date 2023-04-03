@@ -1,6 +1,6 @@
-[
-  "en",
-  "ru",
-  "cs",
-  "uk"
-]
+{
+  "cs": "https://flagcdn.com/h40/cz.png",
+  "en": "https://flagcdn.com/h40/gb.png",
+  "ru": "https://flagcdn.com/h40/ru.png",
+  "uk": "https://flagcdn.com/h40/ua.png"
+}
